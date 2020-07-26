@@ -24,10 +24,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+
 class App extends Component {
 
   render(){
     return (
+    <NavigationContainer>{
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
@@ -71,6 +75,9 @@ class App extends Component {
           </ScrollView>
         </SafeAreaView>
       </>
+      
+      }</NavigationContainer>
+      
     );
   }
   
